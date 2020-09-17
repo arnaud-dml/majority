@@ -1,4 +1,0 @@
-192.168.33.1 - - [17/Sep/2020:17:12:02 +0000] "GET / HTTP/1.1" 404 32309 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
-192.168.33.1 - - [17/Sep/2020:17:12:03 +0000] "GET /favicon.ico HTTP/1.1" 404 167084 "http://192.168.33.10/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
-192.168.33.1 - - [17/Sep/2020:17:12:12 +0000] "GET / HTTP/1.1" 404 32293 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
-192.168.33.1 - - [17/Sep/2020:17:13:03 +0000] "-" 408 0 "-" "-"

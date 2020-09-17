@@ -1,0 +1,6 @@
+# logs
+/php-apache/logs/*
+/nodejs/logs/*
+
+# data
+/mysql/db/*
