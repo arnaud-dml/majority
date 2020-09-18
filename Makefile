@@ -19,7 +19,8 @@ export WEB_URL				= 192.168.33.10
 .PHONY: install git docker-start composer yarn
 
 install: git docker-start composer yarn
-travis: migrations tests
+# travis: migrations tests
+travis: tests
 
 git:
 ifdef GIT_BRANCH
@@ -39,10 +40,10 @@ ifdef TARGET_DOCKER_CLIENT_CONTAINER
 	cd $(APP_CLIENT_PATH) && $(TARGET_DOCKER_CLIENT_CONTAINER) yarn install
 endif
 
-migrations: server/src/Migrations
-ifdef TARGET_DOCKER_SERVER_CONTAINER
-	$(TARGET_DOCKER_SERVER_CONTAINER) php bin/console --no-interaction doctrine:migrations:migrate
-endif
+# migrations: server/src/Migrations
+# ifdef TARGET_DOCKER_SERVER_CONTAINER
+# 	$(TARGET_DOCKER_SERVER_CONTAINER) php bin/console --no-interaction doctrine:migrations:migrate
+# endif
 
 tests: server/tests
 ifdef TARGET_DOCKER_SERVER_CONTAINER
