@@ -7,32 +7,27 @@ php:
 
 env:
   - DOCKER_COMPOSE_VERSION=1.24.1
-  # - DATABASE_URL=mysql://root:XXXX@db:3306/project
+  - DATABASE_URL=mysql://root:XXXX@db:3306/project
 #  - CODECOV_TOKEN="" ## Not required on Travis-CI [...] for public repositories.
 
 services:
   - docker
-  # - mysql
+  - mysql
 
 before_install:
+  - sudo service mysql stop
   - make docker-start
-  # - sleep 15
+  - sleep 15
 
 install:
-  - sleep 15
-  # - make composer
-  # - make yarn
+  - make composer
+  - make yarn
+
+script:
+  - make travis
 
 notifications:
   email: false
-
-# script:
-#   - make travis
-
-# TEST
-script:
-  - make composer
-  - make yarn
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
