@@ -1,4 +1,4 @@
-<!-- [![Build Status](https://travis-ci.com/arnaud-dml/majority.svg?branch=master)](https://travis-ci.com/arnaud-dml/majority) -->
+[![Build Status](https://travis-ci.org/arnaud-dml/majority.svg?branch=master)](https://travis-ci.com/arnaud-dml/majority)
 [![codecov](https://codecov.io/gh/arnaud-dml/majority/branch/master/graph/badge.svg)](https://codecov.io/gh/arnaud-dml/majority)
 
 ## Installation
