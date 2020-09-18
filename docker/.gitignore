@@ -1,6 +1,8 @@
-# logs
+###> docker/logs ###
 /php-apache/logs/*
 /nodejs/logs/*
+### docker/logs <###
 
-# data
+###> docker/data ###
 /mysql/db/*
+### docker/data <###
