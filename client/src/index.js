@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { Provider } from 'react-redux';
-import store from './redux/store/store'
+import configureStore from "./redux/store/configStore";
+import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 import App from './App';
 
-import * as serviceWorker from './serviceWorker';
+const store = configureStore();
 
 // StrictMode: It activates additional checks and warnings for its descendants
 // Provider: Which makes the Redux store available to the rest of your app

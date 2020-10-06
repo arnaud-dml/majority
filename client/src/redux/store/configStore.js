@@ -1,15 +1,13 @@
-import { createStore, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from "redux-thunk";
 import logger from "redux-logger";
-import rootReducers from "./index";
-
-import { calculatingTotalMiddleware } from "../middleware/accounting";
+import rootReducers from "./store";
 
 export function getMiddlewares() {
-    const middlewares = [ // List of all custom middlewares
-        calculatingTotalMiddleware
-    ];
+
+    // List of all custom middlewares
+    const middlewares = [];
 
     //config thunk
     middlewares.push(thunk);
