@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from "react-redux";
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = (props) => {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +22,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default connect()(App);

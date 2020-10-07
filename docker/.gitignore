@@ -4,5 +4,5 @@
 ### docker/logs <###
 
 ###> docker/data ###
-/mysql/db/*
+# /mysql/db/*
 ### docker/data <###

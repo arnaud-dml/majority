@@ -19,6 +19,7 @@ export WEB_URL				= 192.168.33.10
 .PHONY: install git docker-start composer yarn
 
 install: git docker-start composer yarn
+destroy: docker-stop
 travis: tests
 
 git:
@@ -28,6 +29,9 @@ endif
 
 docker-start:
 	docker-compose up -d
+
+docker-stop:
+	docker-compose down
 
 composer: server/composer.json
 ifdef TARGET_DOCKER_SERVER_CONTAINER
