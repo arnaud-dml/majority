@@ -1,8 +1,14 @@
 import { combineReducers } from "redux";
+import security from '../reducer/security';
 
-// List of all entities's reducers to combine
-const entitiesReducer = combineReducers({
-    
+// List of all global's reducers to combine
+const globalReducer = combineReducers({
+    security
 });
 
-export default combineReducers({ entities: entitiesReducer });
+// List of all entity reducers to combine
+const entityReducer = combineReducers({
+    // TODO
+});
+
+export default combineReducers({ global: globalReducer, entity: entityReducer });
