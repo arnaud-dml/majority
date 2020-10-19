@@ -1,5 +1,6 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    # enable_authenticator_manager: true
+
     providers:
         users_in_memory: { memory: null }
     firewalls:
@@ -9,7 +10,20 @@ security:
         main:
             anonymous: true
             lazy: true
-            provider: users_in_memory
+
+            logout:
+                path:   app_logout
+                # where to redirect after logout
+                # target: index
+
+            guard:
+                authenticators:
+                    - App\Security\TokenAuthenticator
+
+                # if you want, disable storing the user in the session
+                # stateless: true
+
+            # provider: users_in_memory
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -17,8 +31,25 @@ security:
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
 
+    encoders:
+        App\Entity\User:
+            # Use native password encoder
+            # This value auto-selects the best possible hashing algorithm
+            # (i.e. Sodium when available).
+            algorithm: auto
+
+    # For role hierarchy to work, do not try to call $user->getRoles() manually.
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+         - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/api, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #  - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+
+         # the 'path' value can be any valid regular expression
+         # (this one will match URLs like /api/post/7298 and /api/comment/528491)
+         # { path: ^/api/(post|comment)/\d+$, roles: ROLE_USER }

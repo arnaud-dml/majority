@@ -43,11 +43,11 @@ const App = (props) => {
                                     <input type="tel" className="form-control" id="phone" placeholder="Numéro de téléphone"/>
                                 </div>
                             </div>
-                            <a href="" className="btn btn-submit btn-primary btn-block">
+                            <a href="/" className="btn btn-submit btn-primary btn-block">
                                 S'inscrire
                             </a>
                             <hr/>
-                            <a href="" className="btn btn-google btn-block">
+                            <a href="/" className="btn btn-google btn-block">
                                 <i className="fab fa-google fa-fw"></i> S'inscrire avec Google
                             </a>
                         </form>

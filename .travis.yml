@@ -26,11 +26,11 @@ install:
 script:
   - make travis
 
-notifications:
-  email: false
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  email: false
 
 #after_failure:
 #  - TODO
