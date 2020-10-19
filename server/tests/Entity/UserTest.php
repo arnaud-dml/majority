@@ -23,26 +23,29 @@ class UserTest extends TestCase {
 //        self::assertCount(0, $this->user->get...());
 //    }
 
+    /**
+     * Try to get an id from the user class instance
+     */
     public function testHasId()
     {
         self::assertNull($this->user->getId());
     }
 
-    public function testHasCreatedAtDate()
-    {
-        $date = new \DateTime();
-        
-        $this->user->setCreatedAt($date);
-        self::assertEquals($date, $this->user->getCreatedAt());
-    }
+    // public function testHasCreatedAtDate()
+    // {
+    //     $date = new \DateTime();
 
-    public function testHasUpdatedAtDate()
-    {
-        $date = new \DateTime();
+    //     $this->user->setCreatedAt($date);
+    //     self::assertEquals($date, $this->user->getCreatedAt());
+    // }
 
-        $this->user->setUpdatedAt($date);
-        self::assertEquals($date, $this->user->getUpdatedAt());
-    }
+    // public function testHasUpdatedAtDate()
+    // {
+    //     $date = new \DateTime();
+
+    //     $this->user->setUpdatedAt($date);
+    //     self::assertEquals($date, $this->user->getUpdatedAt());
+    // }
 
     public function testHasFirstName()
     {
@@ -68,10 +71,10 @@ class UserTest extends TestCase {
         self::assertEquals($email, $this->user->getEmail());
     }
 
-    public function testHasUsername()
-    {
-        self::assertEquals($this->user->getEmail(), $this->user->getUsername());
-    }
+    // public function testHasUsername()
+    // {
+    //     self::assertEquals($this->user->getEmail(), $this->user->getUsername());
+    // }
 
     public function testHasPassword()
     {
