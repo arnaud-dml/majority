@@ -40,9 +40,9 @@ RUN php -r "unlink('composer-setup.php');"
 #     npm install -g yarn
 
 # Install PHPUNIT
-RUN wget https://phar.phpunit.de/phpunit-6.1.phar && \
-    chmod +x phpunit-6.1.phar && \
-    mv phpunit-6.1.phar /usr/local/bin/phpunit
+RUN wget https://phar.phpunit.de/phpunit.phar && \
+    chmod +x phpunit.phar && \
+    mv phpunit.phar /usr/local/bin/phpunit
 
 # Install Xdebug
 RUN pecl install xdebug  && \

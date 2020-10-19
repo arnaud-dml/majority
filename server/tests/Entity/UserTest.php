@@ -17,12 +17,6 @@ class UserTest extends TestCase {
         $this->user = new User();
     }
 
-//    public function testConstruct()
-//    {
-//        self::assertInstanceOf(ArrayCollection::class, $this->user->get...());
-//        self::assertCount(0, $this->user->get...());
-//    }
-
     /**
      * Try to get an id from the user class instance
      */
@@ -30,22 +24,6 @@ class UserTest extends TestCase {
     {
         self::assertNull($this->user->getId());
     }
-
-    // public function testHasCreatedAtDate()
-    // {
-    //     $date = new \DateTime();
-
-    //     $this->user->setCreatedAt($date);
-    //     self::assertEquals($date, $this->user->getCreatedAt());
-    // }
-
-    // public function testHasUpdatedAtDate()
-    // {
-    //     $date = new \DateTime();
-
-    //     $this->user->setUpdatedAt($date);
-    //     self::assertEquals($date, $this->user->getUpdatedAt());
-    // }
 
     public function testHasFirstName()
     {
@@ -71,11 +49,6 @@ class UserTest extends TestCase {
         self::assertEquals($email, $this->user->getEmail());
     }
 
-    // public function testHasUsername()
-    // {
-    //     self::assertEquals($this->user->getEmail(), $this->user->getUsername());
-    // }
-
     public function testHasPassword()
     {
         $password = "Mot de passe";
@@ -97,4 +70,32 @@ class UserTest extends TestCase {
     {
         self::assertNull($this->user->getApiToken());
     }
+
+    //
+    // public function testConstruct()
+    // {
+    //     self::assertInstanceOf(ArrayCollection::class, $this->user->get...());
+    //     self::assertCount(0, $this->user->get...());
+    // }
+    //
+    // public function testHasUsername()
+    // {
+    //     self::assertEquals($this->user->getEmail(), $this->user->getUsername());
+    // }
+    //
+    // public function testHasCreatedAtDate()
+    // {
+    //     $date = new \DateTime();
+    //
+    //     $this->user->setCreatedAt($date);
+    //     self::assertEquals($date, $this->user->getCreatedAt());
+    // }
+    //
+    // public function testHasUpdatedAtDate()
+    // {
+    //     $date = new \DateTime();
+    //
+    //     $this->user->setUpdatedAt($date);
+    //     self::assertEquals($date, $this->user->getUpdatedAt());
+    // }
 }

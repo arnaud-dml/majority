@@ -1,4 +1,6 @@
 {
+    "name": "a.b/c.d",
+    "description": "",
     "type": "project",
     "license": "proprietary",
     "require": {
