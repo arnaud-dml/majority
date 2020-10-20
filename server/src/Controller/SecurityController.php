@@ -13,9 +13,7 @@ class SecurityController extends AbstractController
     /**
      * @Route("/register", name="app_register")
      */
-    public function register() {
-        
-    }
+    public function register($data) {}
 
     /**
      * @Route("/login", name="app_login")

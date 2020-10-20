@@ -8,7 +8,8 @@ php:
 env:
   - DOCKER_COMPOSE_VERSION=1.24.1
   - DATABASE_URL=mysql://root:XXXX@db:3306/project
-#  - CODECOV_TOKEN="" ## Not required on Travis-CI [...] for public repositories.
+  ## Not required on Travis-CI [...] for public repositories.
+  #  - CODECOV_TOKEN="" 
 
 services:
   - docker

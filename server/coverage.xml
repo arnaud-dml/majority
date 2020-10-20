@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603128100">
-  <project timestamp="1603128100">
+<coverage generated="1603203520">
+  <project timestamp="1603203520">
     <file name="/var/www/html/src/Controller/SecurityController.php">
       <class name="App\Controller\SecurityController" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="8" coveredelements="0"/>
@@ -17,7 +17,7 @@
     </file>
     <file name="/var/www/html/src/Entity/User.php">
       <class name="App\Entity\User" namespace="global">
-        <metrics complexity="19" methods="19" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="17" elements="47" coveredelements="29"/>
+        <metrics complexity="19" methods="19" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="47" coveredelements="44"/>
       </class>
       <line num="89" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="91" type="stmt" count="1"/>
@@ -41,21 +41,21 @@
       <line num="135" type="method" name="setPassword" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="137" type="stmt" count="1"/>
       <line num="139" type="stmt" count="1"/>
-      <line num="142" type="method" name="getPhone" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="144" type="stmt" count="0"/>
-      <line num="147" type="method" name="setPhone" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="149" type="stmt" count="0"/>
-      <line num="151" type="stmt" count="0"/>
-      <line num="154" type="method" name="getBirthdate" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="156" type="stmt" count="0"/>
-      <line num="159" type="method" name="setBirthdate" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="161" type="stmt" count="0"/>
-      <line num="163" type="stmt" count="0"/>
-      <line num="166" type="method" name="getAddress" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="168" type="stmt" count="0"/>
-      <line num="171" type="method" name="setAddress" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="173" type="stmt" count="0"/>
-      <line num="175" type="stmt" count="0"/>
+      <line num="142" type="method" name="getPhone" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="144" type="stmt" count="1"/>
+      <line num="147" type="method" name="setPhone" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="149" type="stmt" count="1"/>
+      <line num="151" type="stmt" count="1"/>
+      <line num="154" type="method" name="getBirthdate" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="156" type="stmt" count="1"/>
+      <line num="159" type="method" name="setBirthdate" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="161" type="stmt" count="1"/>
+      <line num="163" type="stmt" count="1"/>
+      <line num="166" type="method" name="getAddress" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="168" type="stmt" count="1"/>
+      <line num="171" type="method" name="setAddress" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="173" type="stmt" count="1"/>
+      <line num="175" type="stmt" count="1"/>
       <line num="178" type="method" name="getRoles" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="180" type="stmt" count="1"/>
       <line num="183" type="method" name="setRoles" visibility="public" complexity="1" crap="1" count="1"/>
@@ -66,7 +66,7 @@
       <line num="195" type="method" name="setApiToken" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="197" type="stmt" count="0"/>
       <line num="199" type="stmt" count="0"/>
-      <metrics loc="201" ncloc="144" classes="1" methods="19" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="17" elements="47" coveredelements="29"/>
+      <metrics loc="201" ncloc="144" classes="1" methods="19" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="47" coveredelements="44"/>
     </file>
     <file name="/var/www/html/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -131,6 +131,6 @@
       <line num="96" type="stmt" count="0"/>
       <metrics loc="98" ncloc="72" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="24" coveredelements="0"/>
     </file>
-    <metrics files="5" loc="431" ncloc="304" classes="5" methods="34" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="66" coveredstatements="17" elements="100" coveredelements="29"/>
+    <metrics files="5" loc="431" ncloc="304" classes="5" methods="34" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="66" coveredstatements="26" elements="100" coveredelements="44"/>
   </project>
 </coverage>

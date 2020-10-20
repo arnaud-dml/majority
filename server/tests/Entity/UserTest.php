@@ -18,13 +18,27 @@ class UserTest extends TestCase {
     }
 
     /**
-     * Try to get an id from the user class instance
+     * Try to get an id from the user class instance - Unit testing the user's id
      */
     public function testHasId()
     {
         self::assertNull($this->user->getId());
     }
 
+    /**
+     * Unit testing the user's address email
+     */
+    public function testHasEmailAddress()
+    {
+        $email = "user@email.com";
+
+        $this->user->setEmail($email);
+        self::assertEquals($email, $this->user->getEmail());
+    }
+
+    /**
+     * Unit testing the user's first name
+     */
     public function testHasFirstName()
     {
         $firstname = "Prénom";
@@ -33,6 +47,9 @@ class UserTest extends TestCase {
         self::assertEquals($firstname, $this->user->getFirstname());
     }
 
+    /**
+     * Unit testing the user's last name
+     */
     public function testHasLastName()
     {
         $lastname = "Nom";
@@ -41,14 +58,9 @@ class UserTest extends TestCase {
         self::assertEquals($lastname, $this->user->getLastname());
     }
 
-    public function testHasAddressEmail()
-    {
-        $email = "user@email.com";
-
-        $this->user->setEmail($email);
-        self::assertEquals($email, $this->user->getEmail());
-    }
-
+    /**
+     * Unit testing the user's password
+     */
     public function testHasPassword()
     {
         $password = "Mot de passe";
@@ -57,6 +69,47 @@ class UserTest extends TestCase {
         self::assertEquals($password, $this->user->getPassword());
     }
 
+    /**
+     * Unit testing the user's phone
+     */
+    public function testHasPhone()
+    {
+        $phone = "06.01.02.03.04";
+
+        $this->user->setPhone($phone);
+        self::assertEquals($phone, $this->user->getPhone());
+    }
+
+    /**
+     * Unit testing the user's birthdate
+     */
+    public function testHasBirthdate()
+    {
+        $birthdate = new \DateTime("01-02-0003");
+
+        $this->user->setBirthdate($birthdate);
+        self::assertEquals($birthdate, $this->user->getBirthdate());
+    }
+
+    /**
+     * Unit testing the user's location
+     */
+    public function testHasAddress()
+    {
+        $address = [
+            "street" => "110 Southmoor Road",
+            "city" => "Oxford",
+            "postCode" => "OX2 6RB",
+            "country" => "United Kingdom"
+        ];
+
+        $this->user->setAddress($address);
+        self::assertEquals($address, $this->user->getAddress());
+    }
+
+    /**
+     * Unit testing the user's roles
+     */
     public function testHasRoles()
     {
         $roles = $this->user->getRoles();
@@ -66,6 +119,9 @@ class UserTest extends TestCase {
         self::assertEquals($roles, $this->user->getRoles());
     }
 
+    /**
+     * Unit testing the user's token
+     */
     public function testHasApiToken()
     {
         self::assertNull($this->user->getApiToken());

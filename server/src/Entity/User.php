@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Trait\HydraterTrait;
 use App\Repository\UserRepository;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
@@ -13,6 +14,9 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User
 {
+
+    use HydraterTrait;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -65,7 +69,7 @@ class User
     /**
      * Birth date | Date de naissance
      * 
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="datetime", length=255, nullable=true)
      */
     private $birthdate;
 
@@ -85,6 +89,10 @@ class User
      * @ORM\Column(type="string", unique=true, nullable=true)
      */
     private $apiToken;
+
+    public function __construct(array $data) {
+        $this->hydrate($data);
+    }
 
     public function getId(): ?int
     {
@@ -151,12 +159,12 @@ class User
         return $this;
     }
 
-    public function getBirthdate(): ?string
+    public function getBirthdate(): ?\DateTimeInterface
     {
         return $this->birthdate;
     }
 
-    public function setBirthdate(?string $birthdate): self
+    public function setBirthdate(\DateTimeInterface $birthdate): self
     {
         $this->birthdate = $birthdate;
 

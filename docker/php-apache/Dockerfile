@@ -34,11 +34,6 @@ RUN php composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-# # Install Node.js
-# RUN curl -sL https://deb.nodesource.com/setup_12.x | bash && \
-#     apt-get install --yes nodejs && \
-#     npm install -g yarn
-
 # Install PHPUNIT
 RUN wget https://phar.phpunit.de/phpunit.phar && \
     chmod +x phpunit.phar && \
