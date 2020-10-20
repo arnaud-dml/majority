@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Entity\Trait;
+namespace App\Entity;
 
 trait HydraterTrait {
 
-    public function $hydrate($data) {
+    public function hydrate($data) {
 
         foreach($data as $key => $value) {
             if (!empty($data) && is_array($data)) {

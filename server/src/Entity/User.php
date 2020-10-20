@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Entity\Trait\HydraterTrait;
+use App\Entity\HydraterTrait;
 use App\Repository\UserRepository;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
