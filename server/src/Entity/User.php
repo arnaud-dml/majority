@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Entity\HydraterTrait;
+use App\Traits\HydraterTrait;
 use App\Repository\UserRepository;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User
 {
-
+    
     use HydraterTrait;
 
     /**
